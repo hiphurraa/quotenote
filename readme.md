@@ -25,7 +25,7 @@
 >##### REGISTRATION_SECRET = [any random string]
 #
 
-### 6. Disable the email verification option (or apply suitable information to .env-tiedostoon): 
+### 6. Disable the email verification option (or apply suitable information to .env-file): 
 >#### server > controllers > userController.js **comment row 57**
 >#### server > models > userModel.js **change row 29 'false' --> 'true'**
 #
