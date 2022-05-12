@@ -156,14 +156,14 @@ CREATE VIEW quote_extended AS SELECT DISTINCT quote.id, quote.quotetext, quote.w
 -- Dumping data for table skeema.user: 0 rows
 /*!40000 ALTER TABLE "user" DISABLE KEYS */;
 INSERT INTO "user" ("name", "email", "password", "created_at", "is_active", "last_activity") VALUES
-	('M', 'test@example.com', 'salasana', '2021-02-14 21:22:01.741045', 'true', NULL);
+	('admin', 'admin@admin.com', 'password', '2021-02-14 21:22:01.741045', 'true', NULL);
 /*!40000 ALTER TABLE "user" ENABLE KEYS */;
 
 
 -- Dumping data for table skeema.quote: 2 082 rows
 /*!40000 ALTER TABLE "quote" DISABLE KEYS */;
 INSERT INTO "quote" ("quotetext", "when", "when_string", "said_by", "location", "user_id") VALUES
-	('Veni, vidi, vici.', NULL, NULL, 'Caesar, Julius', NULL, 1);
+	('This is an example quote. Enjoy. :)', NULL, NULL, 'Quotenote Developers', NULL, 1);
 
 
 /*!40000 ALTER TABLE "quote" ENABLE KEYS */;

@@ -26,7 +26,7 @@ User.create = (userInfo) => {
   try {
     return db.query(
       "INSERT INTO public.user (name, email, password, created_at, is_active, last_activity) VALUES($1, $2, $3, $4, $5, $6) RETURNING *;",
-      [name, email, password, new Date(), false, new Date()]
+      [name, email, password, new Date(), true, new Date()]
     );
   } catch (err) {
     console.log(err);
@@ -89,33 +89,33 @@ User.getRoles = (userId) => {
 }
 
 User.addRole = (userId, roleId) => {
-  try{
+  try {
     return db.any("INSERT INTO user_role (user_id, role_id) VALUES ($1, $2);", [userId, roleId]);
-  }catch(err){
+  } catch (err) {
     console.log(err);
   }
 }
 
 User.removeRole = (userId, roleId) => {
-  try{
+  try {
     return db.any("DELETE FROM user_role WHERE user_id=$1 AND role_id=$2;", [userId, roleId]);
-  }catch(err){
+  } catch (err) {
     console.log(err);
   }
 }
 
 User.confirmEmail = (userId) => {
-  try{
-    return db.query("UPDATE public.user SET is_active=$1 WHERE id=$2;",[true,userId]);
-  }catch(err){
+  try {
+    return db.query("UPDATE public.user SET is_active=$1 WHERE id=$2;", [true, userId]);
+  } catch (err) {
     console.log(err);
   }
 }
 
 User.deleteById = (userId) => {
-  try{
-    return db.query("UPDATE public.user SET name=$1, email=$2, password=$3, created_at=$4, is_active=$5, last_activity=$6, is_banned=$7, ban_ends_at=$8 WHERE id=$9;",['','','',null,false,null,false,null,userId]);
-  }catch(err) {
+  try {
+    return db.query("UPDATE public.user SET name=$1, email=$2, password=$3, created_at=$4, is_active=$5, last_activity=$6, is_banned=$7, ban_ends_at=$8 WHERE id=$9;", ['', '', '', null, false, null, false, null, userId]);
+  } catch (err) {
     console.log(err);
   }
 }

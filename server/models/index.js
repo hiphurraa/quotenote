@@ -6,7 +6,7 @@ import pgPromise from "pg-promise";
 const options = {
   promiseLib: promise,
   query: (e) => {
-    process.env.NODE_ENV ? "" : console.log(e.query);
+    process.env.NODE_ENV ? "" : "" //console.log(e.query);
   },
 };
 

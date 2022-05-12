@@ -156,7 +156,7 @@ CREATE VIEW quote_extended AS SELECT DISTINCT quote.id, quote.quotetext, quote.w
 -- Dumping data for table skeema.user: 0 rows
 /*!40000 ALTER TABLE "user" DISABLE KEYS */;
 INSERT INTO "user" ("name", "email", "password", "created_at", "is_active", "last_activity") VALUES
-	('M', 'test@example.com', 'salasana', '2021-02-14 21:22:01.741045', 'true', NULL);
+	('admin', 'admin@admin.com', 'password', '2021-02-14 21:22:01.741045', 'true', NULL);
 /*!40000 ALTER TABLE "user" ENABLE KEYS */;
 
 
