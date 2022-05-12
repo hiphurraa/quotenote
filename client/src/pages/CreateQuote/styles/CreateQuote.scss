@@ -1,0 +1,61 @@
+.create-quote {
+
+    width: 100ch;
+    margin: 0 auto;
+    margin-top: 15vh;
+
+    .when-options {
+        display: flex;
+        align-items: center;
+        margin-bottom: .2rem;
+
+        label {
+            margin-left: .2rem;
+            font-weight: normal;
+        }
+        input {
+            width: 1rem;
+            height: 1rem;
+            margin-left: 1rem;
+        }
+    }
+
+    .categories{
+        display:flex;
+        flex-wrap: wrap;
+        margin-bottom: 2rem;
+        legend{
+            margin-bottom: .3rem;
+        }
+        .category-option{
+            margin: .3rem;
+            display:flex;
+            align-items: center;
+            label {
+                margin-left: .2rem;
+                font-weight: normal;
+                cursor: pointer;
+            }
+            input {
+                width: 1rem;
+                height: 1rem;
+                margin-left: 1rem;
+                cursor: pointer;
+            }
+        }
+    }
+    
+}
+
+@media screen and (max-width: 1100px) {
+    .create-quote{
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .create-quote {
+        width: 95%;
+    }
+}

@@ -1,0 +1,201 @@
+.quote-wrapper {
+    width: 100%;
+    .user-name {
+        color: rgb(89, 92, 89);
+        text-align: left;
+        margin-left: 1rem;
+        margin-bottom: .2rem;
+        font-size: small;
+        span {
+            font-weight: bold;
+        }
+    }
+    .deleted-user{
+        span{
+            background-color: #cad1ca;
+            border-radius: .5rem;
+            padding: 0 .2rem;
+            color:rgb(110, 119, 110);
+        }
+    }
+}
+
+.quote {
+    background-color: #f9faf9;
+    border-radius: .3rem;
+    box-shadow: .05rem .05rem .2rem rgba(0,0,0,.1);
+    font-family: sans-serif;
+    display:grid;
+    grid-template-areas: 
+    "quote-likes quote-content"
+    "comments categories";
+    grid-template-columns: 5rem auto;
+    margin: 5px;
+
+    .quote-content {
+        font-family: 'Shippori Mincho B1', serif;
+        border-radius: .3rem;
+        padding: 1.5rem 3rem 3rem 2rem;
+        margin: .3rem;
+        cursor: pointer;
+        grid-area: quote-content;
+
+        &:hover {
+            background-color: #f3f7f3;
+        }
+
+        .quotetext {
+            font-size: 1.3rem;
+            line-height: 2rem;
+            color: rgb(51, 58, 51)
+        }
+        .said-by {
+            display:flex;
+            align-items: center;
+            margin-top: 1.5rem;
+            font-size: 1.1rem;
+            color: rgb(94, 110, 94);
+
+            .further-details{
+                display:flex;
+                align-items: center;
+                font-size: 1rem;
+                img{
+                    margin-left: .5rem;
+                }
+                .time-icon{
+                    margin-right: .2rem;
+                }
+                div{
+                    display:flex;
+                    align-items: center;
+                }
+            }
+        }
+    }
+
+    .quote-interactions{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 2.5em;
+
+        button {
+            border: none;
+            border-radius: 100%;
+            background-color: #f9faf9;
+        }
+
+        .quote-likes {
+            font-family: 'Akaya Telivigala', cursive;
+            grid-area: quote-likes;
+            font-weight: bold;
+            font-size: 1.3rem;
+            display:flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 1rem 0;
+    
+            .like-amount{
+                position:relative;
+                top: -0.15rem;
+            }
+    
+            .positive {
+                color: rgb(100, 209, 66);
+            }
+            
+            .neutral {
+                color:rgb(123, 126, 123);
+            }
+            
+            .negative {
+                color: rgb(218, 96, 96);
+            }
+    
+            .upvote{
+                padding: .05rem;
+                margin: -.05rem;
+                &:not([disabled]){
+                    cursor: pointer;
+                    &:hover{
+                        background-color: #dae6da;
+                    }
+                }
+                &:active{
+                    outline-color: rgba(66, 211, 22, 0.432);
+                }
+            }
+    
+            .upvoted {
+                background-color: rgba(111, 216, 79, 0.432);
+            }
+            
+            .downvote {
+                padding: .05rem;
+                margin: -.05rem;
+                &:not([disabled]){
+                    cursor: pointer;
+                    &:hover{
+                        background-color: #dae6da;
+                    }
+                }
+            }
+    
+            .downvoted {
+                background-color:rgba(236, 81, 81, 0.349);
+            }
+        }
+
+        .favorite-button{
+            border: none;
+            border-radius: 100%;
+            padding: .1rem;
+            &:not([disabled]){
+                cursor: pointer;
+                &:hover{
+                    background-color: #ffee0048;
+                }
+            }
+            &:active{
+                outline-color: #ece945c4;
+            }
+        }
+        .hidden{
+            display:none;
+        }
+    }
+
+    
+
+    .quote-comments {
+        grid-area: comments;
+        margin: 0 0 .6rem .6rem;
+        color:rgb(142, 151, 142);
+        font-size: .9rem;
+        width: 100%;
+        .comments-link{
+            cursor: pointer;
+        }
+    }
+
+    .quote-categories {
+        grid-area: categories;
+        display: flex;
+        flex-wrap: wrap;
+        gap: .2rem;
+        margin: 0 0 .6rem 1.2rem;
+
+        .category-text{
+            font-size: .85rem;
+            margin: 0;
+            background-color: #eff5f0;
+            color: rgb(141, 155, 141);
+            border-radius: .4rem;
+            border: solid 1px rgb(219, 228, 218);
+            padding: .125rem .315rem;
+            display: inline;
+        }
+    }
+}
+

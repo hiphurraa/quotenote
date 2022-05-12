@@ -1,0 +1,25 @@
+.home-page{
+    width: 100ch;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h3{
+        width: 100%;
+        color: rgb(83, 92, 83);
+        margin: 2rem 0 2rem .5rem;
+    }
+}
+
+@media screen and (max-width: 150ch) {
+    .home-page {
+        width: 75ch;
+    }
+}
+
+@media screen and (max-width: 100ch) {
+    .home-page {
+        width: 90%;
+    }
+}

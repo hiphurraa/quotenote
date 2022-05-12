@@ -1,0 +1,272 @@
+.navbar {
+    .sticky-nav{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 3;
+        box-shadow: 0 0 .5rem rgba(0, 0, 0, 0.3);
+    }
+
+    nav{
+        padding-left: 30px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: var(--navbar-color);
+        font-family: sans-serif;
+        height: var(--navbar-height);
+    }
+
+    .logo {
+        width: 40%;
+        display: flex;
+        justify-content: flex-start;
+        border-radius: .5rem;
+        padding: .15rem 0;
+        background-color: var(--navbar-color);
+        * {
+            display:flex;
+            align-items: center;
+            text-decoration: none;
+            color: var(--navbar-text-color);
+            letter-spacing: 2px;
+            font-size: 1.5rem;
+        }
+        h4{
+            margin-left:.15rem;
+        }
+        .logo-img{
+            margin: 0 .3rem;
+        }
+    }
+
+    .links {
+        display: flex;
+        justify-content: flex-end;
+        width: 60%;
+        margin: .5rem;
+        font-size: 0.9rem;
+
+        li {
+            list-style: none;
+            display: flex;
+            align-items: center;
+        }
+
+        a {
+            margin: 0 1rem;
+            color: var(--navbar-text-color);
+            padding: .4rem;
+            border-radius: .5rem;
+            text-decoration: none;
+            letter-spacing: 3px;
+            font-weight: bold;
+
+            &:hover {
+                background-color: var(--navbar-link-hover);
+            }
+        }
+    }
+
+    .sign-in-link, .search-link, .create-link{
+        display: flex;
+        align-items: center;
+    }
+
+    .navbar-img {
+        margin-right: .6rem;
+    }
+
+    .burger {
+        display: none;
+        cursor: pointer;
+
+        div {
+            width: 25px;
+            height: 3px;
+            background-color: var(--navbar-text-color);
+            margin: 5px;
+            transition: all 0.3s ease;
+        }
+    }
+
+    #mobile-view {
+        display: none;
+    }
+
+    .blur-background{
+        position: absolute;
+        top: var(--navbar-height);
+        left: 0;
+        z-index:2; 
+        height: 100vh;
+        width: 100vw;
+        background-color: rgba(0, 0, 0, 0.445);
+    }
+    .search-view{
+        z-index: 3;
+        position: absolute;
+        top: var(--navbar-height);
+        left: 0;
+        width: 100%;
+        background-color: var(--navbar-color);
+        padding: 1rem 0;
+        box-shadow: inset 0 0 .5rem rgba(0, 0, 0, 0.3), 0 .5rem .5rem rgba(0, 0, 0, 0.15);
+        .state-message{
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+        .search-items{
+            width: 90%;
+            margin: 0 auto;
+            display:flex;
+            align-items: center;
+            .search-bar{
+                display:flex;
+                flex-direction: row;
+                align-items: center;
+                width: 95%;
+                margin: .5rem auto;
+                height: 3rem;
+                border-radius: 3rem;
+                background-color: white;
+                .search-icon{
+                    width: 3rem;
+                    display: flex;
+                    justify-content: center;
+                    position:relative;
+                    left: .5rem;
+                }
+                .search-input{
+                    width: calc(100% - 6rem);
+                    input{
+                        background-color: white;
+                        border: none;
+                        height: 3rem;
+                        width: 100%;
+                        font-size: 1.4rem;
+                        &:focus{
+                            outline:none;
+                        }
+                    }
+    
+                }
+                .search-button{
+                    width: 3rem;
+                    cursor:pointer;
+                    display: flex;
+                    justify-content: center;
+                }
+            }
+            .close-button{
+                display:flex;
+                img{
+                    margin: 0 auto;
+                }
+                cursor:pointer;
+                border-radius: 100%;
+                padding: .5rem;
+                &:hover{
+                    background-color: rgb(102, 143, 99);
+                }
+            }
+        }
+        .search-results-header{
+            width: 100%;
+            background-color: var(--navbar-color);
+            border-bottom: solid rgb(39, 83, 42) .15rem;
+            h2{
+                margin: 0 auto;
+                text-align: center;
+                color: white;
+                padding: 1rem;
+            }
+        }
+        .search-results{
+            background-color: rgb(50, 97, 50);
+            max-height: calc(100vh - var(--navbar-height) - 8rem);
+            overflow: scroll;
+            width: 100ch;
+            margin: 0 auto;
+            overflow-x: hidden;
+            .list-item{
+                margin: 2rem auto;
+                width: 95%;
+                .user-name{
+                    color: white;
+                }
+            }
+            /* width */
+            &::-webkit-scrollbar {
+                width: 1rem;
+            }
+            
+            /* Track */
+            &::-webkit-scrollbar-track {
+                box-shadow: inset 0 0 5px rgb(185, 197, 186);
+                border-radius: 10px;
+            }
+            
+            /* Handle */
+            &::-webkit-scrollbar-thumb {
+                background: rgb(124, 151, 120);
+                border: solid rgb(140, 168, 141);
+                border-radius: 10px;
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width: 130ch) {
+    .navbar {
+        .search-view{
+            .search-results {
+                width: 75ch;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 120ch) {
+    .navbar {
+        .logo {
+            width: 50%
+        }
+        .links {
+            a{
+                margin: 0 0.2rem;
+            }
+            width: 50%
+        }
+        .burger{
+            display: block;
+            margin: 0 1rem;
+        }
+        #desktop-view {
+            display: none;
+        }
+        #mobile-view {
+            display:flex;
+            justify-content: flex-end;
+        }
+        img {
+            margin: 0;
+        }
+
+    }
+}
+
+
+
+@media screen and (max-width: 100ch) {
+    .navbar{
+        .search-view{
+            .search-results {
+                width: 100%;
+            }
+        }
+    }
+}

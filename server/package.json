@@ -1,0 +1,34 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "nodemon server.js",
+    "test" : "SET NODE_ENV=test && mocha ./tests/*.js --timeout 20000 --exit",
+    "migrate": "node-pg-migrate"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "bluebird": "^3.7.2",
+    "body-parser": "^1.19.0",
+    "chai": "^4.3.0",
+    "chai-http": "^4.3.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "is-empty": "^1.2.0",
+    "jsonwebtoken": "^8.5.1",
+    "mocha": "^8.3.0",
+    "nodemailer": "^6.5.0",
+    "nodemon": "^2.0.7",
+    "passport": "^0.4.1",
+    "passport-jwt": "^4.0.0",
+    "pg": "^8.5.1",
+    "pg-promise": "^10.9.2",
+    "validator": "^13.5.2"
+  }
+}

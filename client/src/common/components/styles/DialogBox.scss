@@ -1,0 +1,75 @@
+.dialog-container{
+
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 3;
+    background-color: rgba(0, 0, 0, 0.411);
+
+    .dialog-content{
+        --width: 50ch;
+        --min-height: 20ch;
+        position: fixed;
+        z-index: 3;
+        top: calc(50vh - var(--min-height)/2);
+        left: calc(50vw - var(--width)/2);
+        background-color: white;
+        padding: 2rem;
+        width: var(--width);
+        min-height: var(--min-height);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: .5rem;
+    }
+
+    .question-text{
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+    }
+
+    button{
+        cursor: pointer;
+        width: 10rem;
+        height: 2rem;
+        border: none;
+        margin: .5rem;
+        font-size: 1.2rem;
+        border-radius: .1rem;
+    }
+
+    .delete-button{
+        background-color: rgb(218, 18, 18);
+        color: white;
+        &:hover{
+            background-color: rgb(231, 13, 13);
+        }
+    }
+
+    .ok-button, .confirm-button{
+        background-color:var(--submit-button-color);
+        color:var(--button-text-color);
+        &:hover{
+            background-color: var(--submit-button-hover);
+        }
+    }
+
+    .cancel-button{
+        background-color: rgb(110, 109, 109);
+        color: white;
+        &:hover{
+            background-color: gray;
+        }
+    }
+
+}
+@media screen and (max-width: 60ch) {
+    .dialog-container{
+        .dialog-content{
+            width: 95%;
+            left: 2.5%;
+        }
+    }
+}

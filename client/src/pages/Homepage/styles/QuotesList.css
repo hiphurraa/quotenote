@@ -1,0 +1,17 @@
+.quotes-list {
+  width: 100%;
+}
+
+.quotes-list .error-message {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.quotes-list .loading-message {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.quotes-list .list-item {
+  margin: 0 0 5rem 0;
+}

@@ -1,0 +1,32 @@
+.home-page {
+  width: 100ch;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.home-page h3 {
+  width: 100%;
+  color: #535c53;
+  margin: 2rem 0 2rem .5rem;
+}
+
+@media screen and (max-width: 150ch) {
+  .home-page {
+    width: 75ch;
+  }
+}
+
+@media screen and (max-width: 100ch) {
+  .home-page {
+    width: 90%;
+  }
+}

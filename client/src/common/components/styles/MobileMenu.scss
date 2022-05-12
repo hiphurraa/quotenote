@@ -1,0 +1,75 @@
+.mobile-menu {
+    z-index: 1;
+    color: var(--navbar-text-color);
+    background-color: var(--mob-menu-color);
+    position: fixed;
+    left: 0;
+    top: var(--navbar-height);
+    height:100vh;
+    width: 100vw;
+    display:none;
+
+    .user-link{
+        background-color: rgb(51, 100, 51);
+        margin: 5% 10%;
+        padding: .5rem;
+        border-radius: 2rem;
+        font-size: 2rem;
+        width: auto;
+        display:flex;
+        justify-content: center;
+        cursor: pointer;
+        &:hover{
+            background-color: rgb(46, 88, 46);
+        }
+        img{
+            width: 2rem;
+            margin-right: .5rem;
+        }
+    }
+
+    .menu-title{
+        margin-bottom: 1rem;
+        margin-left: 5%;
+    }
+
+    li {
+        width: 95%;
+        background-color: rgb(48, 99, 48);
+        font-size: 1.8rem;
+        margin: .3rem auto;
+        border: solid var(--navbar-text-color) 1px;
+        border-radius: 1rem;
+        padding: .5rem 1rem;
+        list-style: none;
+        cursor: pointer;
+        &:hover {
+            background-color: rgb(46, 88, 46);
+        }
+    }
+
+    a {
+        text-decoration: none;
+        color: var(--navbar-text-color);
+    }
+
+    ul {
+        margin: 2rem;
+    }
+}
+
+.menu-show{
+    animation: show-menu 0.25s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes show-menu {
+    from {margin-left: 100vw}
+    to {margin-left: 0}
+  }
+
+  @media screen and (max-width: 120ch) {
+    .menu-show{
+        display:block
+    }
+}

@@ -1,0 +1,97 @@
+.user-profile{
+    width: 100ch;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-card {
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 5rem;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1rem;
+    background-color: #f1f7f0;
+    padding: 1rem;
+    box-shadow: .05rem .1rem .3rem rgba(0, 0, 0, 0.15);
+
+    h3{
+        margin-bottom: 1rem;
+        color:rgb(76, 85, 76);
+    }
+
+    table {
+        width: 100%;
+        border-spacing: 0;
+        border: solid #ced3cd 1px;
+
+        td{
+            font-size: 1.2rem;
+            height: 3rem;
+            width: 20%;
+            padding: .4rem .7rem;
+            &:nth-child(odd){
+                font-weight: bold;
+                color:rgb(81, 90, 81);
+                font-size: 1rem;
+            }
+        } 
+
+        tr:nth-child(even) {
+            background: #f1f7f0;
+        }
+    
+        tr:nth-child(odd) {
+            background: #d7ddd6;
+        }
+    
+    }
+
+    .user-profile-buttons{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        button {
+            color:rgb(255, 255, 255);
+            cursor:pointer;
+            padding: .3rem;
+            border-radius: .3rem;
+            border: none;
+            margin: 1rem .5rem 0 .5rem;
+        }
+        .logout-button{
+            background-color: rgb(97, 153, 97);
+        }
+        .delete-user-button{
+            background-color: #818b80;
+        }
+    }
+
+    .admin-tag, .moderator-tag{
+        margin-left: .5rem;
+        font-weight: bold;
+        font-size: 1rem;
+        padding-right: .3rem;
+        color: rgb(71, 143, 71);
+        background-color: rgb(171, 216, 171);
+        border: solid rgb(144, 189, 151) 1px;
+        border-radius: .5rem;
+    }
+
+}
+
+@media screen and (max-width: 150ch) {
+    .user-profile{
+        width: 75ch;
+    }
+}
+
+@media screen and (max-width: 100ch) {
+    .user-profile{
+        width: 90%;
+    }
+}

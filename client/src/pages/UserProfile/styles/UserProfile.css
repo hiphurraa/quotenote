@@ -1,0 +1,120 @@
+.user-profile {
+  width: 100ch;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.profile-card {
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 1rem;
+  background-color: #f1f7f0;
+  padding: 1rem;
+  -webkit-box-shadow: 0.05rem 0.1rem 0.3rem rgba(0, 0, 0, 0.15);
+          box-shadow: 0.05rem 0.1rem 0.3rem rgba(0, 0, 0, 0.15);
+}
+
+.profile-card h3 {
+  margin-bottom: 1rem;
+  color: #4c554c;
+}
+
+.profile-card table {
+  width: 100%;
+  border-spacing: 0;
+  border: solid #ced3cd 1px;
+}
+
+.profile-card table td {
+  font-size: 1.2rem;
+  height: 3rem;
+  width: 20%;
+  padding: .4rem .7rem;
+}
+
+.profile-card table td:nth-child(odd) {
+  font-weight: bold;
+  color: #515a51;
+  font-size: 1rem;
+}
+
+.profile-card table tr:nth-child(even) {
+  background: #f1f7f0;
+}
+
+.profile-card table tr:nth-child(odd) {
+  background: #d7ddd6;
+}
+
+.profile-card .user-profile-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+}
+
+.profile-card .user-profile-buttons button {
+  color: white;
+  cursor: pointer;
+  padding: .3rem;
+  border-radius: .3rem;
+  border: none;
+  margin: 1rem .5rem 0 .5rem;
+}
+
+.profile-card .user-profile-buttons .logout-button {
+  background-color: #619961;
+}
+
+.profile-card .user-profile-buttons .delete-user-button {
+  background-color: #818b80;
+}
+
+.profile-card .admin-tag, .profile-card .moderator-tag {
+  margin-left: .5rem;
+  font-weight: bold;
+  font-size: 1rem;
+  padding-right: .3rem;
+  color: #478f47;
+  background-color: #abd8ab;
+  border: solid #90bd97 1px;
+  border-radius: .5rem;
+}
+
+@media screen and (max-width: 150ch) {
+  .user-profile {
+    width: 75ch;
+  }
+}
+
+@media screen and (max-width: 100ch) {
+  .user-profile {
+    width: 90%;
+  }
+}

@@ -1,0 +1,18 @@
+.login-user {
+  width: 100ch;
+  margin: 0 auto;
+  margin-top: 15vh;
+}
+
+@media screen and (max-width: 1100px) {
+  .login-user {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .login-user {
+    width: 95%;
+  }
+}

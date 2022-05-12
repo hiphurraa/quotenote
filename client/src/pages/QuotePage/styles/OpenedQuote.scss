@@ -1,0 +1,198 @@
+.opened-quote{
+
+    margin-top: 5vh;
+
+    .quote{
+        margin: 0 0 2rem 0;
+        .quote-content{
+            cursor: default;
+            &:hover {
+                background-color: #f9faf9;
+            }
+        }
+    }
+
+    .error-message{
+        text-align: center;
+    }
+
+    .quote-wrapper {
+        width: 100%;
+        .user-name {
+            color: rgb(89, 92, 89);
+            text-align: left;
+            margin-left: 1rem;
+            margin-bottom: .2rem;
+            font-size: small;
+            span {
+                font-weight: bold;
+            }
+        }
+        .deleted-user{
+            span{
+                background-color: #cad1ca;
+                border-radius: .5rem;
+                padding: 0 .2rem;
+                color:rgb(110, 119, 110);
+            }
+        }
+    }
+    
+    .quote {
+        margin: 0 0 2rem 0;
+        background-color: #f9faf9;
+        border-radius: .3rem;
+        box-shadow: .05rem .05rem .2rem rgba(0,0,0,.1);
+        font-family: sans-serif;
+        display:grid;
+        grid-template-areas: 
+        "quote-likes quote-content popup-menu"
+        "comments categories categories";
+        grid-template-columns: 5rem auto 2rem;
+        margin: 5px;
+    
+        .quote-content {
+            border-radius: .3rem;
+            padding: 1.5rem 3rem 3rem 2rem;
+            margin: .3rem;
+            cursor: default;
+            grid-area: quote-content;
+    
+            .quotetext {
+                font-size: 1.3rem;
+                line-height: 2rem;
+                color: rgb(51, 58, 51)
+            }
+            .said-by {
+                margin-top: 1.5rem;
+                font-size: 1.1rem;
+                color: rgb(99, 112, 99)
+            }
+        }
+
+        .quote-interactions{
+            display:flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 2.5em;
+
+            .quote-likes {
+                font-family: 'Akaya Telivigala', cursive;
+                grid-area: quote-likes;
+                font-weight: bold;
+                font-size: 1.3rem;
+                display:flex;
+                flex-direction: column;
+                align-items: center;
+                margin: 1rem 0;
+        
+                button {
+                    border: none;
+                    border-radius: 100%;
+                }
+    
+                .like-amount{
+                    position:relative;
+                    top: -0.15rem;
+                }
+        
+                .positive {
+                    color: rgb(100, 209, 66);
+                }
+                
+                .neutral {
+                    color:rgb(123, 126, 123);
+                }
+                
+                .negative {
+                    color: rgb(218, 96, 96);
+                }
+        
+                .upvote{
+                    padding: .05rem;
+                    margin: -.05rem;
+                    background-color: #f9faf9;
+                    &:not([disabled]){
+                        cursor: pointer;
+                        &:hover{
+                            background-color: #dae6da;
+                        }
+                    }
+                    &:active{
+                        outline-color: rgba(66, 211, 22, 0.432);
+                    }
+                }
+    
+                .upvoted {
+                    background-color: rgba(111, 216, 79, 0.432);
+                }
+                
+                .downvote {
+                    padding: .05rem;
+                    margin: -.05rem;
+                    background-color: #f9faf9;
+                    &:not([disabled]){
+                        cursor: pointer;
+                        &:hover{
+                            background-color: #dae6da;
+                        }
+                    }
+                    &:active{
+                        background-color:rgba(216, 20, 20, 0.349);
+                    }
+                }
+    
+                .downvoted {
+                    background-color:rgba(236, 81, 81, 0.349);
+                }
+            }
+            
+            .favorite-button{
+                border: none;
+                border-radius: 100%;
+                padding: .1rem;
+                &:not([disabled]){
+                    cursor: pointer;
+                    &:hover{
+                        background-color: #ffee0048;
+                    }
+                }
+                &:active{
+                    outline-color: #ece945c4;
+                }
+            }
+            .hidden{
+                display:none;
+            }
+        }
+        
+    
+       
+    
+        .quote-comments {
+            grid-area: comments;
+            margin: 0 0 .6rem .6rem;
+            color:rgb(148, 155, 148);
+            font-size: .9rem;
+        }
+    }
+
+    .quote-categories {
+        grid-area: categories;
+        display: flex;
+        flex-wrap: wrap;
+        gap: .2rem;
+        margin: 0 0 .6rem 1.2rem;
+
+        .category-text{
+            font-size: .85rem;
+            margin: 0;
+            background-color: #eff5f0;
+            color: rgb(141, 155, 141);
+            border-radius: .4rem;
+            border: solid 1px rgb(219, 228, 218);
+            padding: .125rem .315rem;
+            display: inline;
+        }
+    }
+}

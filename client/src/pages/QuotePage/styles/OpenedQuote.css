@@ -1,0 +1,235 @@
+.opened-quote {
+  margin-top: 5vh;
+}
+
+.opened-quote .quote {
+  margin: 0 0 2rem 0;
+}
+
+.opened-quote .quote .quote-content {
+  cursor: default;
+}
+
+.opened-quote .quote .quote-content:hover {
+  background-color: #f9faf9;
+}
+
+.opened-quote .error-message {
+  text-align: center;
+}
+
+.opened-quote .quote-wrapper {
+  width: 100%;
+}
+
+.opened-quote .quote-wrapper .user-name {
+  color: #595c59;
+  text-align: left;
+  margin-left: 1rem;
+  margin-bottom: .2rem;
+  font-size: small;
+}
+
+.opened-quote .quote-wrapper .user-name span {
+  font-weight: bold;
+}
+
+.opened-quote .quote-wrapper .deleted-user span {
+  background-color: #cad1ca;
+  border-radius: .5rem;
+  padding: 0 .2rem;
+  color: #6e776e;
+}
+
+.opened-quote .quote {
+  margin: 0 0 2rem 0;
+  background-color: #f9faf9;
+  border-radius: .3rem;
+  -webkit-box-shadow: 0.05rem 0.05rem 0.2rem rgba(0, 0, 0, 0.1);
+          box-shadow: 0.05rem 0.05rem 0.2rem rgba(0, 0, 0, 0.1);
+  font-family: sans-serif;
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "quote-likes quote-content popup-menu" "comments categories categories";
+  -ms-grid-columns: 5rem auto 2rem;
+      grid-template-columns: 5rem auto 2rem;
+  margin: 5px;
+}
+
+.opened-quote .quote .quote-content {
+  border-radius: .3rem;
+  padding: 1.5rem 3rem 3rem 2rem;
+  margin: .3rem;
+  cursor: default;
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: quote-content;
+}
+
+.opened-quote .quote .quote-content .quotetext {
+  font-size: 1.3rem;
+  line-height: 2rem;
+  color: #333a33;
+}
+
+.opened-quote .quote .quote-content .said-by {
+  margin-top: 1.5rem;
+  font-size: 1.1rem;
+  color: #637063;
+}
+
+.opened-quote .quote .quote-interactions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 2.5em;
+}
+
+.opened-quote .quote .quote-interactions .quote-likes {
+  font-family: 'Akaya Telivigala', cursive;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: quote-likes;
+  font-weight: bold;
+  font-size: 1.3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 1rem 0;
+}
+
+.opened-quote .quote .quote-interactions .quote-likes button {
+  border: none;
+  border-radius: 100%;
+}
+
+.opened-quote .quote .quote-interactions .quote-likes .like-amount {
+  position: relative;
+  top: -0.15rem;
+}
+
+.opened-quote .quote .quote-interactions .quote-likes .positive {
+  color: #64d142;
+}
+
+.opened-quote .quote .quote-interactions .quote-likes .neutral {
+  color: #7b7e7b;
+}
+
+.opened-quote .quote .quote-interactions .quote-likes .negative {
+  color: #da6060;
+}
+
+.opened-quote .quote .quote-interactions .quote-likes .upvote {
+  padding: .05rem;
+  margin: -.05rem;
+  background-color: #f9faf9;
+}
+
+.opened-quote .quote .quote-interactions .quote-likes .upvote:not([disabled]) {
+  cursor: pointer;
+}
+
+.opened-quote .quote .quote-interactions .quote-likes .upvote:not([disabled]):hover {
+  background-color: #dae6da;
+}
+
+.opened-quote .quote .quote-interactions .quote-likes .upvote:active {
+  outline-color: rgba(66, 211, 22, 0.432);
+}
+
+.opened-quote .quote .quote-interactions .quote-likes .upvoted {
+  background-color: rgba(111, 216, 79, 0.432);
+}
+
+.opened-quote .quote .quote-interactions .quote-likes .downvote {
+  padding: .05rem;
+  margin: -.05rem;
+  background-color: #f9faf9;
+}
+
+.opened-quote .quote .quote-interactions .quote-likes .downvote:not([disabled]) {
+  cursor: pointer;
+}
+
+.opened-quote .quote .quote-interactions .quote-likes .downvote:not([disabled]):hover {
+  background-color: #dae6da;
+}
+
+.opened-quote .quote .quote-interactions .quote-likes .downvote:active {
+  background-color: rgba(216, 20, 20, 0.349);
+}
+
+.opened-quote .quote .quote-interactions .quote-likes .downvoted {
+  background-color: rgba(236, 81, 81, 0.349);
+}
+
+.opened-quote .quote .quote-interactions .favorite-button {
+  border: none;
+  border-radius: 100%;
+  padding: .1rem;
+}
+
+.opened-quote .quote .quote-interactions .favorite-button:not([disabled]) {
+  cursor: pointer;
+}
+
+.opened-quote .quote .quote-interactions .favorite-button:not([disabled]):hover {
+  background-color: #ffee0048;
+}
+
+.opened-quote .quote .quote-interactions .favorite-button:active {
+  outline-color: #ece945c4;
+}
+
+.opened-quote .quote .quote-interactions .hidden {
+  display: none;
+}
+
+.opened-quote .quote .quote-comments {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: comments;
+  margin: 0 0 .6rem .6rem;
+  color: #949b94;
+  font-size: .9rem;
+}
+
+.opened-quote .quote-categories {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-area: categories;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: .2rem;
+  margin: 0 0 .6rem 1.2rem;
+}
+
+.opened-quote .quote-categories .category-text {
+  font-size: .85rem;
+  margin: 0;
+  background-color: #eff5f0;
+  color: #8d9b8d;
+  border-radius: .4rem;
+  border: solid 1px #dbe4da;
+  padding: .125rem .315rem;
+  display: inline;
+}

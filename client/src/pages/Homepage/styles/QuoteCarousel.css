@@ -1,0 +1,124 @@
+.quote-carousel {
+  min-height: 21rem;
+  overflow: hidden;
+  width: 110%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.quote-carousel .carousel-container {
+  width: 100%;
+}
+
+.quote-carousel .next-btn {
+  margin-top: 2rem;
+  cursor: pointer;
+}
+
+.quote-carousel .previous-btn {
+  margin-top: 2rem;
+  cursor: pointer;
+}
+
+.quote-carousel .carousel-container {
+  overflow: hidden;
+}
+
+.quote-carousel .quote-container {
+  position: relative;
+}
+
+@-webkit-keyframes carousel-previous {
+  0% {
+    left: 0;
+  }
+  20% {
+    left: 100ch;
+  }
+  21% {
+    left: -100ch;
+  }
+  100% {
+    left: 0;
+  }
+}
+
+@keyframes carousel-previous {
+  0% {
+    left: 0;
+  }
+  20% {
+    left: 100ch;
+  }
+  21% {
+    left: -100ch;
+  }
+  100% {
+    left: 0;
+  }
+}
+
+@-webkit-keyframes carousel-next {
+  0% {
+    left: 0;
+  }
+  20% {
+    left: -100ch;
+  }
+  21% {
+    left: 100ch;
+  }
+  100% {
+    left: 0;
+  }
+}
+
+@keyframes carousel-next {
+  0% {
+    left: 0;
+  }
+  20% {
+    left: -100ch;
+  }
+  21% {
+    left: 100ch;
+  }
+  100% {
+    left: 0;
+  }
+}
+
+.quote-carousel .animate-previous {
+  -webkit-animation-name: carousel-previous;
+          animation-name: carousel-previous;
+  -webkit-animation-duration: .6s;
+          animation-duration: .6s;
+  -webkit-animation-fill-mode: forward;
+          animation-fill-mode: forward;
+}
+
+.quote-carousel .animate-next {
+  -webkit-animation-name: carousel-next;
+          animation-name: carousel-next;
+  -webkit-animation-duration: .6s;
+          animation-duration: .6s;
+  -webkit-animation-fill-mode: forward;
+          animation-fill-mode: forward;
+}
+
+.quote-carousel .error-msg {
+  padding: 1rem;
+}
+
+@media screen and (max-width: 100ch) {
+  .quote-carousel {
+    width: 108%;
+  }
+}

@@ -1,0 +1,79 @@
+.edit-quote {
+  width: 100ch;
+  margin: 0 auto;
+  margin-top: 15vh;
+}
+
+.edit-quote h3 {
+  color: #455346;
+}
+
+.edit-quote .when-options {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: .2rem;
+}
+
+.edit-quote .when-options label {
+  margin-left: .2rem;
+  font-weight: normal;
+}
+
+.edit-quote .when-options input {
+  width: 1rem;
+  height: 1rem;
+  margin-left: 1rem;
+}
+
+.edit-quote .categories {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.edit-quote .categories legend {
+  margin-bottom: .3rem;
+}
+
+.edit-quote .categories .category-option {
+  margin: .3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.edit-quote .categories .category-option label {
+  margin-left: .2rem;
+  font-weight: normal;
+  cursor: pointer;
+}
+
+.edit-quote .categories .category-option input {
+  width: 1rem;
+  height: 1rem;
+  margin-left: 1rem;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1100px) {
+  .edit-quote {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .edit-quote {
+    width: 95%;
+  }
+}

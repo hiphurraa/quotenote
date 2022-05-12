@@ -1,0 +1,102 @@
+.custom-form {
+  width: 100%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 1rem;
+  background-color: #f1f7f0;
+  padding: 1rem;
+  -webkit-box-shadow: 0.05rem 0.1rem 0.3rem rgba(0, 0, 0, 0.15);
+          box-shadow: 0.05rem 0.1rem 0.3rem rgba(0, 0, 0, 0.15);
+}
+
+.custom-form .form-title {
+  margin: 0 auto 1rem auto;
+  color: #39463a;
+}
+
+.custom-form .form-field {
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 1.5rem;
+  border: none;
+}
+
+.custom-form .form-field legend {
+  margin-left: .5rem;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.custom-form .form-field input:focus, .custom-form .form-field textarea:focus {
+  outline: none;
+  -webkit-box-shadow: 0 0 .2rem black;
+          box-shadow: 0 0 .2rem black;
+}
+
+.custom-form .form-field input {
+  width: 100%;
+  height: 2.5rem;
+  border-radius: .3rem;
+  border: solid #b3b3b3 1px;
+  padding: 0 1rem;
+}
+
+.custom-form .form-field .submit-button {
+  padding: .5rem;
+  font-size: 18px;
+  background-color: var(--submit-button-color);
+  color: whitesmoke;
+  border: none;
+  border-radius: .5rem;
+  cursor: pointer;
+}
+
+.custom-form .form-field .submit-button:hover {
+  background-color: var(--submit-button-hover);
+}
+
+.custom-form .form-field textarea {
+  width: 100%;
+  height: 6rem;
+  border-radius: .3rem;
+  border: solid #b3b3b3 1px;
+  padding: 0 1rem;
+  resize: none;
+}
+
+.custom-form .form-field .error-message {
+  color: #d31212;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 768px) {
+  .custom-form .form-field {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .custom-form .form-field {
+    width: 95%;
+  }
+}

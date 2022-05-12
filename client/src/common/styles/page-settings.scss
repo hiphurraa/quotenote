@@ -1,0 +1,29 @@
+:root{
+
+    --main-color: #3d723b;
+    --main-bacground: #EBEBEB;
+
+    /* Navbar */
+    --navbar-height: 3.5rem;
+    --navbar-color: var(--main-color);
+    --navbar-link-hover: #417a3f;
+    --navbar-text-color: #fcfcfc;
+
+    /* Sidenav */
+    --sidenav-background: #e4ece2;
+
+
+    /* Mobile menu */
+    --mob-menu-color: var(--main-color);
+
+    /* forms */
+    --focus-color: #535353;
+    --background-color :#EBEBEB;
+
+    /* Buttons */
+    --submit-button-color: var(--navbar-color);
+    --submit-button-hover: #407c3e;
+    --cancel-button-color: #7f8a88;
+    --cancel-button-hover: #798583;
+    --button-text-color: var(--navbar-text-color);
+}

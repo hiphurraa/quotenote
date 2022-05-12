@@ -1,0 +1,29 @@
+.favorites-page{
+    width: 90ch;
+    margin: 2rem auto 0 auto;
+    
+    .list-item{
+        margin-bottom: 3rem;
+    }
+    .favorites-heading{
+        color: rgb(83, 92, 83);
+        display:flex;
+        margin-bottom: 2rem;
+        img{
+            margin-right: .5rem;
+        }
+    }
+    
+}
+
+@media screen and (max-width: 150ch) {
+    .favorites-page {
+        width: 75ch;
+    }
+}
+
+@media screen and (max-width: 100ch) {
+    .favorites-page {
+        width: 90%;
+    }
+}

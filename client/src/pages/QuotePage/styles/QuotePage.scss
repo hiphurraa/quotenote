@@ -1,0 +1,16 @@
+.quote-page{
+    width: 100ch;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 150ch) {
+    .quote-page {
+        width: 75ch;
+    }
+}
+
+@media screen and (max-width: 100ch) {
+    .quote-page {
+        width: 90%;
+    }
+}
