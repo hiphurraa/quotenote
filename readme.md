@@ -1,41 +1,35 @@
 # QuoteNote
 
-## Oletukset
+## Prerequisites
 
->#### Projekti on tehty reactilla, node.js:llä ja PostgreSQL:llä. Asenna siis nämä, jotta voit suorittaa sovelluksen omalla koneella. 
+>#### Project requires Nodejs and PostgreSQL installed on your system.
 >##### [PostgreSQL installer](https://www.postgresql.org/download/)
->##### [Node.js:n asennus, jonka mukana tulee npm](https://nodejs.org/en/download/)
+>##### [Node.js:n asennus, which includes npm](https://nodejs.org/en/download/)
 
-## Asennus
+## Installation
 #
 
-### 1. Lataa repo dev opsista "git clone [repon-osoite-devopsista]"
+### 1. Create new PostgreSQL database and import either the "quotenote_empty.sql" or "quotenote_with_test_data.sql" into the database.
 #
 
-### 2. Aja uuteen tietokantaan db-kansion "testidata_heroku02.sql"-tiedosto. 
+### 3. Run 'npm install' both in client-folder and server-folder.
 #
 
-### 3. Sekä server että client kansiossa, aja komento 'npm ci', joka asentaa tarvittavat riippuvuudet
+### 4. In server-folder, copy .env.example and rename it as .env
 #
 
-### 4. Server kansiossa, kopioi .env.example ja nimeä se .env
-#
-
-### 5. .env-tiedostoon, täydennä kohdat
->##### DATABASE_URL = [postgresql-tietokannan connetion url]
+### 5. Fill the required information in .env-file.
+>##### DATABASE_URL = [postgresql-database connetion url]
 >##### APP_PORT = 3001
->##### ACCESS_TOKEN_SECRET = [mikä tahansa merkkijono]
->##### REGISTRATION_SECRET = [mikä tahansa merkkijono]
+>##### ACCESS_TOKEN_SECRET = [any random string]
+>##### REGISTRATION_SECRET = [any random string]
 #
 
-### 6. Ota sähköpostivarmistus pois (tai laita sopivan sähköpostin tiedot .env-tiedostoon): 
->#### server > controllers > userController.js **kommentoi rivi 57**
->#### server > models > userModel.js **muuta rivin 29 'false' --> 'true'**
+### 6. Disable the email verification option (or apply suitable information to .env-file): 
+>#### server > controllers > userController.js **comment row 57**
+>#### server > models > userModel.js **change row 29 'false' --> 'true'**
 #
 
-### 7. Paikallinen ja Herokun tietokanta käyttävät eri konfiguraatioita
->#### server > models > index.js 
-#### Kommentoi rivit 26 ja 27, ja poista rivin 30 kommentointi. Paikallinen tietokanta ei käytä SSL-yhteyttä, siksi muutos
 #
-### 8. Palveluiden käynnistäminen
-#### Nyt käynnistä komentoriviltä sekä client-kansiossa että server-kansiossa palvelut komennolla "npm start". Selaimeen pitäisi aueta oikea välilehti automaattisesti. 
+### 8. Start the program
+####  Run 'npm start' both in client-folder and server-folder.
