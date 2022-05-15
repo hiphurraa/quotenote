@@ -1,3 +1,5 @@
+This is a full stack project made in Savonia university of applied sciences. The backend is done with Nodejs using Expressjs library. PostgreSQL was chosen for the database. Frontend is done with Reactjs.
+
 # QuoteNote
 
 ## Prerequisites
