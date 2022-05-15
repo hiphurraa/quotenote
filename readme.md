@@ -6,7 +6,7 @@ This is a full stack project made in Savonia university of applied sciences. The
 
 >#### Project requires Nodejs and PostgreSQL installed on your system.
 >##### [PostgreSQL installer](https://www.postgresql.org/download/)
->##### [Node.js:n asennus, which includes npm](https://nodejs.org/en/download/)
+>##### [Node.js:n installation, which includes npm](https://nodejs.org/en/download/)
 
 ## Installation
 #
